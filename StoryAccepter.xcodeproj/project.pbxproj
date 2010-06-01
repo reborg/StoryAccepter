@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
+		AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
+		AE9C15F111B5A54F007BE2ED /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
+		AE9C15FE11B5A559007BE2ED /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
+		AE9C160B11B5A69F007BE2ED /* TrackerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */; };
+		AE9C162611B5A754007BE2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162511B5A754007BE2ED /* Foundation.framework */; };
+		AE9C163611B5A785007BE2ED /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
+		AE9C163811B5A78F007BE2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C163711B5A78F007BE2ED /* Foundation.framework */; };
+		AE9C163B11B5A7BF007BE2ED /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
+		AE9C164A11B5BEAF007BE2ED /* NSURLConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9C164911B5BEAF007BE2ED /* NSURLConnectionDelegate.h */; };
+		AE9C167F11B5BF43007BE2ED /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C161C11B5A72A007BE2ED /* Tracker.m */; };
+		AE9C168B11B5BF68007BE2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C168A11B5BF68007BE2ED /* main.m */; };
+		AE9C169711B5BFCC007BE2ED /* OCMock.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
+		AE9C169811B5BFCC007BE2ED /* OCHamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
+		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
+		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE9C163411B5A781007BE2ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9C162111B5A747007BE2ED;
+			remoteInfo = Domain;
+		};
+		AE9C163911B5A7B6007BE2ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9C162111B5A747007BE2ED;
+			remoteInfo = Domain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		AE9C16A011B5BFF5007BE2ED /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE9C169711B5BFCC007BE2ED /* OCMock.framework in Copy Frameworks */,
+				AE9C169811B5BFCC007BE2ED /* OCHamcrest.framework in Copy Frameworks */,
+				AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StoryAccepterSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
+		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
+		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
+		AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackerSpec.m; path = Spec/Domain/Interfaces/TrackerSpec.m; sourceTree = "<group>"; };
+		AE9C161B11B5A72A007BE2ED /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tracker.h; path = App/Domain/Interfaces/Tracker.h; sourceTree = "<group>"; };
+		AE9C161C11B5A72A007BE2ED /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tracker.m; path = App/Domain/Interfaces/Tracker.m; sourceTree = "<group>"; };
+		AE9C162211B5A747007BE2ED /* libDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C162511B5A754007BE2ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE9C162E11B5A77B007BE2ED /* StoryAccepter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryAccepter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C163011B5A77B007BE2ED /* StoryAccepter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryAccepter-Info.plist"; sourceTree = "<group>"; };
+		AE9C163711B5A78F007BE2ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE9C164911B5BEAF007BE2ED /* NSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSURLConnectionDelegate.h; path = App/Domain/Interfaces/NSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		AE9C168A11B5BF68007BE2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Spec/Domain/main.m; sourceTree = "<group>"; };
+		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
+		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				AE9C15F111B5A54F007BE2ED /* Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C155F11B5A286007BE2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C15FE11B5A559007BE2ED /* Cedar.framework in Frameworks */,
+				AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */,
+				AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */,
+				AE9C163B11B5A7BF007BE2ED /* libDomain.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C162011B5A747007BE2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C162611B5A754007BE2ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C162C11B5A77B007BE2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C163611B5A785007BE2ED /* libDomain.a in Frameworks */,
+				AE9C163811B5A78F007BE2ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Accepter */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C15FF11B5A569007BE2ED /* App */,
+				AE9C160011B5A56F007BE2ED /* Spec */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				AE9C162511B5A754007BE2ED /* Foundation.framework */,
+				AE9C163011B5A77B007BE2ED /* StoryAccepter-Info.plist */,
+				AE9C163711B5A78F007BE2ED /* Foundation.framework */,
+			);
+			name = Accepter;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C159411B5A47F007BE2ED /* OCMock.framework */,
+				AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */,
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+				AE9C15F011B5A54F007BE2ED /* Cedar.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */,
+				AE9C156111B5A286007BE2ED /* DomainSpec */,
+				AE9C162211B5A747007BE2ED /* libDomain.a */,
+				AE9C162E11B5A77B007BE2ED /* StoryAccepter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE9C15FF11B5A569007BE2ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C160511B5A5C1007BE2ED /* UI */,
+				AE9C160411B5A5BC007BE2ED /* Domain */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		AE9C160011B5A56F007BE2ED /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C160311B5A5B6007BE2ED /* UI */,
+				AE9C160211B5A5A3007BE2ED /* Domain */,
+				AE9C173911B5CB16007BE2ED /* SpecHelpers */,
+			);
+			name = Spec;
+			sourceTree = "<group>";
+		};
+		AE9C160211B5A5A3007BE2ED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C160611B5A5C6007BE2ED /* Interfaces */,
+				AE9C168A11B5BF68007BE2ED /* main.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		AE9C160311B5A5B6007BE2ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		AE9C160411B5A5BC007BE2ED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C160711B5A5D1007BE2ED /* Interfaces */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		AE9C160511B5A5C1007BE2ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		AE9C160611B5A5C6007BE2ED /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		AE9C160711B5A5D1007BE2ED /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C164911B5BEAF007BE2ED /* NSURLConnectionDelegate.h */,
+				AE9C161B11B5A72A007BE2ED /* Tracker.h */,
+				AE9C161C11B5A72A007BE2ED /* Tracker.m */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		AE9C173911B5CB16007BE2ED /* SpecHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */,
+				AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */,
+			);
+			name = SpecHelpers;
+			path = Spec/SpecHelpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AE9C161E11B5A747007BE2ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C164A11B5BEAF007BE2ED /* NSURLConnectionDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F960486AA7600D96B5E /* StoryAccepterSpec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "StoryAccepterSpec" */;
+			buildPhases = (
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				8DD76F9E0486AA7600D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoryAccepterSpec;
+			productInstallPath = "$(HOME)/bin";
+			productName = Accepter;
+			productReference = 8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */;
+			productType = "com.apple.product-type.tool";
+		};
+		AE9C156011B5A286007BE2ED /* DomainSpec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9C156711B5A2A1007BE2ED /* Build configuration list for PBXNativeTarget "DomainSpec" */;
+			buildPhases = (
+				AE9C155E11B5A286007BE2ED /* Sources */,
+				AE9C155F11B5A286007BE2ED /* Frameworks */,
+				AE9C16A011B5BFF5007BE2ED /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE9C163A11B5A7B6007BE2ED /* PBXTargetDependency */,
+			);
+			name = DomainSpec;
+			productName = DomainSpec;
+			productReference = AE9C156111B5A286007BE2ED /* DomainSpec */;
+			productType = "com.apple.product-type.tool";
+		};
+		AE9C162111B5A747007BE2ED /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9C162911B5A755007BE2ED /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				AE9C161E11B5A747007BE2ED /* Headers */,
+				AE9C161F11B5A747007BE2ED /* Sources */,
+				AE9C162011B5A747007BE2ED /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = AE9C162211B5A747007BE2ED /* libDomain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE9C162D11B5A77B007BE2ED /* StoryAccepter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9C163311B5A77C007BE2ED /* Build configuration list for PBXNativeTarget "StoryAccepter" */;
+			buildPhases = (
+				AE9C162A11B5A77B007BE2ED /* Resources */,
+				AE9C162B11B5A77B007BE2ED /* Sources */,
+				AE9C162C11B5A77B007BE2ED /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE9C163511B5A781007BE2ED /* PBXTargetDependency */,
+			);
+			name = StoryAccepter;
+			productName = Accepter;
+			productReference = AE9C162E11B5A77B007BE2ED /* StoryAccepter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "StoryAccepter" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Accepter */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F960486AA7600D96B5E /* StoryAccepterSpec */,
+				AE9C162D11B5A77B007BE2ED /* StoryAccepter */,
+				AE9C156011B5A286007BE2ED /* DomainSpec */,
+				AE9C162111B5A747007BE2ED /* Domain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE9C162A11B5A77B007BE2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C155E11B5A286007BE2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C160B11B5A69F007BE2ED /* TrackerSpec.m in Sources */,
+				AE9C168B11B5BF68007BE2ED /* main.m in Sources */,
+				AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C161F11B5A747007BE2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9C167F11B5BF43007BE2ED /* Tracker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9C162B11B5A77B007BE2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE9C163511B5A781007BE2ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9C162111B5A747007BE2ED /* Domain */;
+			targetProxy = AE9C163411B5A781007BE2ED /* PBXContainerItemProxy */;
+		};
+		AE9C163A11B5A7B6007BE2ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9C162111B5A747007BE2ED /* Domain */;
+			targetProxy = AE9C163911B5A7B6007BE2ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927508733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../cedar/build/Release\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StoryAccepterSpec;
+			};
+			name = Debug;
+		};
+		1DEB927608733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../cedar/build/Release\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StoryAccepterSpec;
+			};
+			name = Release;
+		};
+		1DEB927908733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB927A08733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		AE9C156311B5A286007BE2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../OCMock 1.55\"",
+					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
+					"\"$(SRCROOT)/../cedar/build/Release\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DomainSpec;
+			};
+			name = Debug;
+		};
+		AE9C156411B5A286007BE2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../OCMock 1.55\"",
+					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
+					"\"$(SRCROOT)/../cedar/build/Release\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DomainSpec;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AE9C162311B5A747007BE2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = Domain;
+			};
+			name = Debug;
+		};
+		AE9C162411B5A747007BE2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = Domain;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AE9C163111B5A77C007BE2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "StoryAccepter-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = StoryAccepter;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		AE9C163211B5A77C007BE2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "StoryAccepter-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = StoryAccepter;
+				SDKROOT = iphoneos3.1.3;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "StoryAccepterSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927508733DD40010E9CD /* Debug */,
+				1DEB927608733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "StoryAccepter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927908733DD40010E9CD /* Debug */,
+				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9C156711B5A2A1007BE2ED /* Build configuration list for PBXNativeTarget "DomainSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9C156311B5A286007BE2ED /* Debug */,
+				AE9C156411B5A286007BE2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9C162911B5A755007BE2ED /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9C162311B5A747007BE2ED /* Debug */,
+				AE9C162411B5A747007BE2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9C163311B5A77C007BE2ED /* Build configuration list for PBXNativeTarget "StoryAccepter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9C163111B5A77C007BE2ED /* Debug */,
+				AE9C163211B5A77C007BE2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
