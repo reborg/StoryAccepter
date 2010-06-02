@@ -1,19 +1,15 @@
 #import <Foundation/Foundation.h>
 
 @protocol NSURLConnectionDelegate;
+@class FakeHTTPURLResponse;
 
-#pragma mark NSURLConnection+Spec
 @interface NSURLConnection (Spec)
+
 + (NSArray *)connections;
-@end
 
-#pragma mark FakeURLConnection
-@interface FakeURLConnection : NSURLConnection {
-    NSURLRequest *request_;
-    id<NSURLConnectionDelegate> delegate_;
-}
+- (NSURLRequest *)request;
+- (id<NSURLConnectionDelegate>)delegate;
 
-@property (nonatomic, copy) NSURLRequest *request;
-@property (nonatomic, assign) id<NSURLConnectionDelegate> delegate;
+- (void)returnResponse:(FakeHTTPURLResponse *)response;
 
 @end

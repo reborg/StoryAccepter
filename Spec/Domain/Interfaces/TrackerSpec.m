@@ -5,7 +5,10 @@
 #import <OCHamcrest/OCHamcrest.h>
 
 #import "Tracker.h"
+#import "NSURLConnectionDelegate.h"
 #import "NSURLConnection+Spec.h"
+#import "FakeResponses.h"
+#import "FakeHTTPURLResponse.h"
 
 SPEC_BEGIN(TrackerSpec)
 
@@ -21,12 +24,16 @@ describe(@"Tracker", ^{
     });
 
     describe(@"logIn", ^{
-        __block FakeURLConnection *connection;
+        __block id mockDelegate;
+        __block NSURLConnection *connection;
         __block NSURLRequest *request;
 
         beforeEach(^{
-            [tracker logIn];
+            mockDelegate = [OCMockObject mockForProtocol:@protocol(NSURLConnectionDelegate)];
+
+            [tracker logInWithDelegate:mockDelegate];
             connection = [[NSURLConnection connections] lastObject];
+
             request = [connection request];
         });
 
@@ -47,71 +54,19 @@ describe(@"Tracker", ^{
             assertThat([[request URL] scheme], equalTo(@"https"));
         });
 
-        describe(@"on authentication challenge", ^{
-            __block id<NSURLConnectionDelegate> delegate;
-            __block NSURLAuthenticationChallenge *challenge;
-            __block NSURLCredential *failedCredential;
-            __block unsigned int failureCount;
-            __block void (^setUpConnection)(void);
-
-            beforeEach(^{
-                setUpConnection = [^{
-                    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:@TRACKER_HOST
-                                                                                                  port:0
-                                                                                              protocol:@TRACKER_PROTOCOL
-                                                                                                 realm:nil
-                                                                                  authenticationMethod:nil];
-                    challenge = [[NSURLAuthenticationChallenge alloc] initWithProtectionSpace:protectionSpace
-                                                                           proposedCredential:failedCredential
-                                                                         previousFailureCount:failureCount
-                                                                              failureResponse:nil
-                                                                                        error:nil
-                                                                                       sender:nil];
-                    [protectionSpace release];
-
-                    delegate = [connection delegate];
-                    [delegate connection:connection didReceiveAuthenticationChallenge:challenge];
-                } copy];
-            });
-
-            afterEach(^{
-                [challenge release];
-            });
-
-            describe(@"with no previous authentication failure", ^{
-                beforeEach(^{
-                    failureCount = 0;
-                    setUpConnection();
-                });
-
-                it(@"should ask its delegate for credentials", ^{
-                });
-
-                it(@"should pass nil to the delegate for the previous credentials", ^{
-                });
-
-                it(@"should retry the request with the newly specified credentials", ^{
-                });
-            });
-
-            describe(@"with a previous authentication failure", ^{
-                beforeEach(^{
-                    failureCount = 1;
-                    failedCredential = [[NSURLCredential alloc] initWithUser:@"username"
-                                                                    password:@"password"
-                                                                 persistence:NSURLCredentialPersistenceNone];
-                    setUpConnection();
-                });
-
-                it(@"should !!!", ^{
-                });
-            });
-        });
-
         describe(@"on success", ^{
             beforeEach(^{
-                // !!! Succeed
+                FakeHTTPURLResponse *response = [[FakeResponses responsesForRequest:@"LogIn"] success];
+                [[mockDelegate expect] connection:connection didReceiveResponse:response];
+
+                [connection returnResponse:response];
             });
+
+            it(@"should pass along the success response", ^{
+                [mockDelegate verify];
+            });
+
+            it(@"should use the returned token in subsequent requests", PENDING);
         });
     });
 });

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17E9C811B5D265004C4DC0 /* FakeResponses.m */; };
+		AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */; };
 		AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
 		AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
 		AE9C15F111B5A54F007BE2ED /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
@@ -24,6 +26,7 @@
 		AE9C169811B5BFCC007BE2ED /* OCHamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
 		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
 		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
+		AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,11 @@
 /* Begin PBXFileReference section */
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StoryAccepterSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE17E9C711B5D265004C4DC0 /* FakeResponses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeResponses.h; sourceTree = "<group>"; };
+		AE17E9C811B5D265004C4DC0 /* FakeResponses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeResponses.m; sourceTree = "<group>"; };
+		AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHTTPURLResponse.h; sourceTree = "<group>"; };
+		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
+		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
@@ -87,6 +95,7 @@
 		AE9C168A11B5BF68007BE2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Spec/Domain/main.m; sourceTree = "<group>"; };
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
+		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +175,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AE17EAFF11B5EF91004C4DC0 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				AE17ECA011B6E632004C4DC0 /* FakeResponses */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		AE17ECA011B6E632004C4DC0 /* FakeResponses */ = {
+			isa = PBXGroup;
+			children = (
+				AE17ECA111B6E632004C4DC0 /* LogIn */,
+			);
+			name = FakeResponses;
+			path = Spec/Fixtures/FakeResponses;
+			sourceTree = "<group>";
+		};
+		AE17ECA111B6E632004C4DC0 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				AE17ECA211B6E632004C4DC0 /* 200.txt */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
 		AE9C15FF11B5A569007BE2ED /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +215,7 @@
 				AE9C160311B5A5B6007BE2ED /* UI */,
 				AE9C160211B5A5A3007BE2ED /* Domain */,
 				AE9C173911B5CB16007BE2ED /* SpecHelpers */,
+				AE17EAFF11B5EF91004C4DC0 /* Fixtures */,
 			);
 			name = Spec;
 			sourceTree = "<group>";
@@ -189,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9C160611B5A5C6007BE2ED /* Interfaces */,
+				AE9C174311B5CC40007BE2ED /* Pages */,
 				AE9C168A11B5BF68007BE2ED /* main.m */,
 			);
 			name = Domain;
@@ -239,9 +275,21 @@
 			children = (
 				AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */,
 				AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */,
+				AE17E9C711B5D265004C4DC0 /* FakeResponses.h */,
+				AE17E9C811B5D265004C4DC0 /* FakeResponses.m */,
+				AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */,
+				AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */,
 			);
 			name = SpecHelpers;
 			path = Spec/SpecHelpers;
+			sourceTree = "<group>";
+		};
+		AE9C174311B5CC40007BE2ED /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */,
+			);
+			name = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +422,9 @@
 				AE9C160B11B5A69F007BE2ED /* TrackerSpec.m in Sources */,
 				AE9C168B11B5BF68007BE2ED /* main.m in Sources */,
 				AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */,
+				AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */,
+				AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */,
+				AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
