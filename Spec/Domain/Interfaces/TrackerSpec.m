@@ -60,11 +60,12 @@ describe(@"Tracker", ^{
             beforeEach(^{
                 FakeHTTPURLResponse *response = [[FakeResponses responsesForRequest:@"LogIn"] success];
                 [[mockDelegate expect] connection:connection didReceiveResponse:response];
+                [[mockDelegate expect] connectionDidFinishLoading:connection];
 
                 [connection returnResponse:response];
             });
 
-            it(@"should pass along the success response", ^{
+            it(@"should pass along the success response, and notify the delegate when the request has completed", ^{
                 [mockDelegate verify];
             });
 

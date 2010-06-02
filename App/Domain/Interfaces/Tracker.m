@@ -16,8 +16,9 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [NSException raise:@"NotImplemented" format:@"Not implemented"];
+    [delegate_ connectionDidFinishLoading:connection];
 }
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [NSException raise:@"NotImplemented" format:@"Not implemented"];
 }

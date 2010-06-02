@@ -51,7 +51,19 @@
 }
 
 - (void)returnResponse:(FakeHTTPURLResponse *)response {
-    [[self delegate] connection:self didReceiveResponse:response];
+    id delegate = [self delegate];
+
+    if ([delegate respondsToSelector:@selector(connection:didReceiveResponse:)]) {
+        [[self delegate] connection:self didReceiveResponse:response];
+    }
+
+    if ([delegate respondsToSelector:@selector(connection:didReceiveData:)]) {
+        [[self delegate] connection:self didReceiveData:[[response body] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+
+    if ([delegate respondsToSelector:@selector(connectionDidFinishLoading:)]) {
+        [[self delegate] connectionDidFinishLoading:self];
+    }
 }
 
 - (void)sendAuthenticationChallengeWithCredential:(NSURLCredential *)credential {
@@ -59,7 +71,10 @@
     NSURLAuthenticationChallenge *challenge = [[NSURLAuthenticationChallenge alloc] initWithProtectionSpace:protectionSpace proposedCredential:credential previousFailureCount:1 failureResponse:nil error:nil sender:nil];
     [protectionSpace release];
 
-    [[self delegate] connection:self didReceiveAuthenticationChallenge:challenge];
+    id delegate = [self delegate];
+    if ([delegate respondsToSelector:@selector(connection:didReceiveAuthenticationChallenge:)]) {
+        [[self delegate] connection:self didReceiveAuthenticationChallenge:challenge];
+    }
 }
 
 #pragma mark private methods
