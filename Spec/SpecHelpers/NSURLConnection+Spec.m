@@ -36,6 +36,12 @@
     return [NSString stringWithFormat:@"<Test HTTP connection for request %@>", [self request]];
 }
 
+- (void)cancel {
+    [[[self class] connectionsInternal] removeObject:self];
+    [[[self class] requestsByConnection] removeObjectForKey:self];
+    [[[self class] delegatesByConnection] removeObjectForKey:self];
+}
+
 - (NSURLRequest *)request {
     return [[[self class] requestsByConnection] objectForKey:self];
 }
@@ -46,6 +52,14 @@
 
 - (void)returnResponse:(FakeHTTPURLResponse *)response {
     [[self delegate] connection:self didReceiveResponse:response];
+}
+
+- (void)sendAuthenticationChallengeWithCredential:(NSURLCredential *)credential {
+    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:@"www.example.com" port:0 protocol:@"http" realm:nil authenticationMethod:nil];
+    NSURLAuthenticationChallenge *challenge = [[NSURLAuthenticationChallenge alloc] initWithProtectionSpace:protectionSpace proposedCredential:credential previousFailureCount:1 failureResponse:nil error:nil sender:nil];
+    [protectionSpace release];
+
+    [[self delegate] connection:self didReceiveAuthenticationChallenge:challenge];
 }
 
 #pragma mark private methods

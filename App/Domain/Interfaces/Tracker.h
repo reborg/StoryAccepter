@@ -10,6 +10,6 @@
     NSMutableArray *activeConnections_;
 }
 
-- (void)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate;
+- (NSURLConnection *)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate;
 
 @end

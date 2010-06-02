@@ -11,5 +11,6 @@
 - (id<NSURLConnectionDelegate>)delegate;
 
 - (void)returnResponse:(FakeHTTPURLResponse *)response;
+- (void)sendAuthenticationChallengeWithCredential:(NSURLCredential *)credential;
 
 @end

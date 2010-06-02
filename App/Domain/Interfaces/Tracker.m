@@ -26,9 +26,9 @@
     [delegate_ connection:connection didReceiveResponse:response];
 }
 
-//- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-//    // TODO: handle auth challenge
-//}
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    [delegate_ connection:connection didReceiveAuthenticationChallenge:challenge];
+}
 
 @end
 
@@ -51,7 +51,7 @@ static NSURL *BASE_URL;
     [super dealloc];
 }
 
-- (void)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate {
+- (NSURLConnection *)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate {
     NSURL *url = [[NSURL alloc] initWithString:@"tokens/active" relativeToURL:BASE_URL];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSURLConnection *connection = [[TrackerConnection alloc] initWithRequest:request delegate:delegate];
@@ -60,6 +60,8 @@ static NSURL *BASE_URL;
     [connection release];
     [request release];
     [url release];
+
+    return connection;
 }
 
 @end
