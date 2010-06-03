@@ -5,7 +5,6 @@
 #import <OCHamcrest/OCHamcrest.h>
 
 #import "Tracker.h"
-#import "Tracker+Spec.h"
 #import "NSURLConnectionDelegate.h"
 #import "NSURLConnection+Spec.h"
 #import "FakeResponses.h"
@@ -55,7 +54,9 @@ describe(@"Tracker", ^{
             assertThat([[request URL] scheme], equalTo(@"https"));
         });
 
-        it(@"should add the new connection to the active connections", PENDING);
+        it(@"should add the new connection to the active connections", ^{
+            assertThat([tracker activeConnections], hasItem(connection));
+        });
 
         describe(@"on success", ^{
             beforeEach(^{
@@ -70,9 +71,18 @@ describe(@"Tracker", ^{
                 [mockDelegate verify];
             });
 
-            it(@"should remove the connection from the active connections", PENDING);
+            it(@"should remove the connection from the active connections", ^{
+                assertThat([tracker activeConnections], isNot(hasItem(connection)));
+            });
 
-            it(@"should use the returned token in subsequent requests", PENDING);
+            it(@"should use the returned token in subsequent requests", ^{
+                [tracker getProjectsWithDelegate:nil];
+                NSURLRequest *subsequentRequest = [[[NSURLConnection connections] lastObject] request];
+
+                // This is the token in the fake request.
+                NSString *expectedToken = @"c93f12c71bec27843c1d84b3bdd547f3";
+                assertThat([subsequentRequest valueForHTTPHeaderField:@"X-TrackerToken"], equalTo(expectedToken));
+            });
         });
 
         describe(@"on cancel", ^{
@@ -83,7 +93,10 @@ describe(@"Tracker", ^{
                 [connection cancel];
             });
 
-            it(@"should remove the connection from the active connections", PENDING);
+            it(@"should remove the connection from the active connections", ^{
+                [[[connection retain] autorelease] cancel];
+                assertThat([tracker activeConnections], isNot(hasItem(connection)));
+            });
         });
 
         describe(@"on authentication failure", ^{
