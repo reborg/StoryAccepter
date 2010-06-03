@@ -27,6 +27,7 @@
 		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
 		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
 		AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */; };
+		AECB9DED11B72D1900587338 /* Tracker+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AECB9DEC11B72D1900587338 /* Tracker+Spec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
 		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
+		AECB9DEB11B72D1900587338 /* Tracker+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tracker+Spec.h"; sourceTree = "<group>"; };
+		AECB9DEC11B72D1900587338 /* Tracker+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tracker+Spec.m"; sourceTree = "<group>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +286,8 @@
 				AE17E9C811B5D265004C4DC0 /* FakeResponses.m */,
 				AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */,
 				AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */,
+				AECB9DEB11B72D1900587338 /* Tracker+Spec.h */,
+				AECB9DEC11B72D1900587338 /* Tracker+Spec.m */,
 			);
 			name = SpecHelpers;
 			path = Spec/SpecHelpers;
@@ -437,6 +442,7 @@
 				AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */,
 				AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */,
 				AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */,
+				AECB9DED11B72D1900587338 /* Tracker+Spec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

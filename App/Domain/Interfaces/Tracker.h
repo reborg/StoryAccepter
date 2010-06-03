@@ -8,6 +8,7 @@
 
 @interface Tracker : NSObject {
     NSMutableArray *activeConnections_;
+    NSString *token_;
 }
 
 - (NSURLConnection *)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate;

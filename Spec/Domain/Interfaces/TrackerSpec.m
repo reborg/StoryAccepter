@@ -5,6 +5,7 @@
 #import <OCHamcrest/OCHamcrest.h>
 
 #import "Tracker.h"
+#import "Tracker+Spec.h"
 #import "NSURLConnectionDelegate.h"
 #import "NSURLConnection+Spec.h"
 #import "FakeResponses.h"
@@ -116,9 +117,12 @@ describe(@"Tracker", ^{
     });
 
     describe(@"getProjectsWithDelegate:", ^{
+        __block NSString *token = @"wibble wobble wubble";
+
         beforeEach(^{
             mockDelegate = [OCMockObject mockForProtocol:@protocol(NSURLConnectionDelegate)];
 
+            [tracker setToken:token];
             [tracker getProjectsWithDelegate:mockDelegate];
             connection = [[NSURLConnection connections] lastObject];
 
@@ -142,7 +146,9 @@ describe(@"Tracker", ^{
             assertThat([[request URL] scheme], equalTo(@"http"));
         });
 
-        it(@"should include the user's Tracker token in the request header", PENDING);
+        it(@"should include the user's Tracker token in the request header", ^{
+            assertThat([request valueForHTTPHeaderField:@"X-TrackerToken"], equalTo(token));
+        });
 
         it(@"should add the new connection to the active connections", PENDING);
     });

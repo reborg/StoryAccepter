@@ -48,6 +48,7 @@
 }
 
 - (void)dealloc {
+    [token_ release];
     [activeConnections_ release];
     [super dealloc];
 }
@@ -65,7 +66,10 @@
 - (NSURLConnection *)connectionForPath:(NSString *)path andDelegate:(id<NSURLConnectionDelegate>)delegate secure:(BOOL)secure {
     NSURL *baseUrl = [self newBaseURLWithSSL:secure];
     NSURL *url = [[NSURL alloc] initWithString:path relativeToURL:baseUrl];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setValue:token_ forHTTPHeaderField:@"X-TrackerToken"];
+
     NSURLConnection *connection = [[TrackerConnection alloc] initWithRequest:request delegate:delegate];
     [activeConnections_ addObject:connection];
 

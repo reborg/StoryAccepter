@@ -79,6 +79,8 @@
     if ([delegate respondsToSelector:@selector(connection:didReceiveAuthenticationChallenge:)]) {
         [[self delegate] connection:self didReceiveAuthenticationChallenge:challenge];
     }
+
+    [challenge release];
 }
 
 #pragma mark private methods
