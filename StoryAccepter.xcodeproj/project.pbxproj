@@ -27,6 +27,11 @@
 		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
 		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
 		AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */; };
+		AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */; };
+		AED41B7911B81C2D006DBB00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41B7811B81C2D006DBB00 /* UIKit.framework */; };
+		AED41C4611B81FBE006DBB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C4511B81FBE006DBB00 /* main.m */; };
+		AED41C7511B82151006DBB00 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C7311B82151006DBB00 /* LandingViewController.m */; };
+		AED41C7B11B821B8006DBB00 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED41C7A11B821B8006DBB00 /* LandingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,14 +78,14 @@
 
 /* Begin PBXFileReference section */
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StoryAccepterSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD76FA10486AA7600D96B5E /* StoryAccepterSpec */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = StoryAccepterSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE17E9C711B5D265004C4DC0 /* FakeResponses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeResponses.h; sourceTree = "<group>"; };
 		AE17E9C811B5D265004C4DC0 /* FakeResponses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeResponses.m; sourceTree = "<group>"; };
 		AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHTTPURLResponse.h; sourceTree = "<group>"; };
 		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
 		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 		AE17ECC811B6E86F004C4DC0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
 		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
@@ -98,6 +103,14 @@
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
 		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
 		AED41B1F11B81383006DBB00 /* 400.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 400.txt; sourceTree = "<group>"; };
+		AED41B6E11B81BC6006DBB00 /* StoryAccepterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryAccepterAppDelegate.h; path = App/UI/StoryAccepterAppDelegate.h; sourceTree = "<group>"; };
+		AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryAccepterAppDelegate.m; path = App/UI/StoryAccepterAppDelegate.m; sourceTree = "<group>"; };
+		AED41B7811B81C2D006DBB00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AED41C4511B81FBE006DBB00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = App/UI/main.m; sourceTree = "<group>"; };
+		AED41C7211B82151006DBB00 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = App/UI/Controllers/LandingViewController.h; sourceTree = "<group>"; };
+		AED41C7311B82151006DBB00 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = App/UI/Controllers/LandingViewController.m; sourceTree = "<group>"; };
+		AED41C7A11B821B8006DBB00 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSXMLParserDelegate.h; path = App/Domain/Extensions/NSXMLParserDelegate.h; sourceTree = "<group>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +149,7 @@
 			files = (
 				AE9C163611B5A785007BE2ED /* libDomain.a in Frameworks */,
 				AE9C163811B5A78F007BE2ED /* Foundation.framework in Frameworks */,
+				AED41B7911B81C2D006DBB00 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +161,7 @@
 			children = (
 				AE9C15FF11B5A569007BE2ED /* App */,
 				AE9C160011B5A56F007BE2ED /* Spec */,
-				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				08FB779DFE84155DC02AAC07 /* Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				AE9C162511B5A754007BE2ED /* Foundation.framework */,
 				AE9C163011B5A77B007BE2ED /* StoryAccepter-Info.plist */,
@@ -157,15 +171,16 @@
 			name = Accepter;
 			sourceTree = "<group>";
 		};
-		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+		08FB779DFE84155DC02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				AE9C159411B5A47F007BE2ED /* OCMock.framework */,
 				AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */,
 				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
 				AE9C15F011B5A54F007BE2ED /* Cedar.framework */,
+				AED41B7811B81C2D006DBB00 /* UIKit.framework */,
 			);
-			name = "External Frameworks and Libraries";
+			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
@@ -246,6 +261,7 @@
 		AE9C160411B5A5BC007BE2ED /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AED41CCA11B83800006DBB00 /* Extensions */,
 				AE9C160711B5A5D1007BE2ED /* Interfaces */,
 			);
 			name = Domain;
@@ -254,6 +270,11 @@
 		AE9C160511B5A5C1007BE2ED /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AED41C7711B82155006DBB00 /* Controllers */,
+				AED41B6E11B81BC6006DBB00 /* StoryAccepterAppDelegate.h */,
+				AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */,
+				AED41C4511B81FBE006DBB00 /* main.m */,
+				AED41C7911B821B8006DBB00 /* Resources */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -296,6 +317,32 @@
 				AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		AED41C7711B82155006DBB00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AED41C7211B82151006DBB00 /* LandingViewController.h */,
+				AED41C7311B82151006DBB00 /* LandingViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AED41C7911B821B8006DBB00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AED41C7A11B821B8006DBB00 /* LandingViewController.xib */,
+			);
+			name = Resources;
+			path = App/UI/Resources;
+			sourceTree = "<group>";
+		};
+		AED41CCA11B83800006DBB00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		AEF6DDEC11B7221300F691B8 /* GetProjects */ = {
@@ -416,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED41C7B11B821B8006DBB00 /* LandingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +502,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */,
+				AED41C4611B81FBE006DBB00 /* main.m in Sources */,
+				AED41C7511B82151006DBB00 /* LandingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -647,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

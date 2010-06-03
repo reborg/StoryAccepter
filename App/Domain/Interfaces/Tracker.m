@@ -1,5 +1,6 @@
 #import "Tracker.h"
 #import "NSURLConnectionDelegate.h"
+#import "NSXMLParserDelegate.h"
 
 @interface TrackerConnection : NSURLConnection <NSURLConnectionDelegate> {
     Tracker *tracker_;
