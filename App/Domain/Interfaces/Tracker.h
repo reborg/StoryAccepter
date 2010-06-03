@@ -11,5 +11,6 @@
 }
 
 - (NSURLConnection *)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate;
+- (NSURLConnection *)getProjectsWithDelegate:(id<NSURLConnectionDelegate>)delegate;
 
 @end

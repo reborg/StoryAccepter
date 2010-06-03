@@ -33,16 +33,16 @@
 
 @end
 
-static NSURL *BASE_URL;
+@interface Tracker (private)
+- (NSURLConnection *) connectionForPath:(NSString *)path andDelegate:(id<NSURLConnectionDelegate>)delegate secure:(BOOL)secure;
+- (NSURL *)newBaseURLWithSSL:(BOOL)secure;
+@end
 
 @implementation Tracker
 
 - (id)init {
     if (self = [super init]) {
         activeConnections_ = [[NSMutableArray alloc] init];
-        if (!BASE_URL) {
-            BASE_URL = [[NSURL alloc] initWithString:@TRACKER_PROTOCOL TRACKER_HOST TRACKER_API_BASE_URI];
-        }
     }
     return self;
 }
@@ -53,7 +53,18 @@ static NSURL *BASE_URL;
 }
 
 - (NSURLConnection *)logInWithDelegate:(id<NSURLConnectionDelegate>)delegate {
-    NSURL *url = [[NSURL alloc] initWithString:@"tokens/active" relativeToURL:BASE_URL];
+    return [self connectionForPath:@"tokens/active" andDelegate:delegate secure:true];
+}
+
+- (NSURLConnection *)getProjectsWithDelegate:(id<NSURLConnectionDelegate>)delegate {
+    return [self connectionForPath:@"projects" andDelegate:delegate secure:false];
+}
+
+#pragma mark private interface
+
+- (NSURLConnection *)connectionForPath:(NSString *)path andDelegate:(id<NSURLConnectionDelegate>)delegate secure:(BOOL)secure {
+    NSURL *baseUrl = [self newBaseURLWithSSL:secure];
+    NSURL *url = [[NSURL alloc] initWithString:path relativeToURL:baseUrl];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSURLConnection *connection = [[TrackerConnection alloc] initWithRequest:request delegate:delegate];
     [activeConnections_ addObject:connection];
@@ -61,8 +72,17 @@ static NSURL *BASE_URL;
     [connection release];
     [request release];
     [url release];
+    [baseUrl release];
 
     return connection;
+}
+
+- (NSURL *)newBaseURLWithSSL:(BOOL)secure {
+    if (secure) {
+        return [[NSURL alloc] initWithString:@"https://" TRACKER_HOST TRACKER_API_BASE_URI];
+    } else {
+        return [[NSURL alloc] initWithString:@"http://" TRACKER_HOST TRACKER_API_BASE_URI];
+    }
 }
 
 @end

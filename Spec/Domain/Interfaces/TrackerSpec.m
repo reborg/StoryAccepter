@@ -14,23 +14,23 @@ SPEC_BEGIN(TrackerSpec)
 
 describe(@"Tracker", ^{
     __block Tracker *tracker;
+    __block id mockDelegate;
+    __block NSURLConnection *connection;
+    __block NSURLRequest *request;
 
     beforeEach(^{
+        [NSURLConnection resetAll];
+
         tracker = [[Tracker alloc] init];
+        mockDelegate = [OCMockObject mockForProtocol:@protocol(NSURLConnectionDelegate)];
     });
 
     afterEach(^{
         [tracker release];
     });
 
-    describe(@"logIn", ^{
-        __block id mockDelegate;
-        __block NSURLConnection *connection;
-        __block NSURLRequest *request;
-
+    describe(@"logInWithDelegate:", ^{
         beforeEach(^{
-            mockDelegate = [OCMockObject mockForProtocol:@protocol(NSURLConnectionDelegate)];
-
             [tracker logInWithDelegate:mockDelegate];
             connection = [[NSURLConnection connections] lastObject];
 
@@ -69,6 +69,8 @@ describe(@"Tracker", ^{
                 [mockDelegate verify];
             });
 
+            it(@"should remove the connection from the active connections", PENDING);
+
             it(@"should use the returned token in subsequent requests", PENDING);
         });
 
@@ -94,6 +96,14 @@ describe(@"Tracker", ^{
             it(@"should request credentials from the delegate", ^{
                 [mockDelegate verify];
             });
+
+            describe(@"when the client chooses to cancel the authentication challenge", ^{
+                beforeEach(^{
+                    [[connection delegate] connection:connection didCancelAuthenticationChallenge:nil];
+                });
+
+                it(@"should remove the connection from the active connections", PENDING);
+            });
         });
 
         describe(@"on failure", ^{
@@ -103,6 +113,38 @@ describe(@"Tracker", ^{
         describe(@"on connection error", ^{
             it(@"should notify the delegate of the error", PENDING);
         });
+    });
+
+    describe(@"getProjectsWithDelegate:", ^{
+        beforeEach(^{
+            mockDelegate = [OCMockObject mockForProtocol:@protocol(NSURLConnectionDelegate)];
+
+            [tracker getProjectsWithDelegate:mockDelegate];
+            connection = [[NSURLConnection connections] lastObject];
+
+            request = [connection request];
+        });
+
+        it(@"should send one HTTP request", ^{
+            assertThatInt([[NSURLConnection connections] count], equalToInt(1));
+        });
+
+        it(@"should send to the proper URI", ^{
+            assertThat([[request URL] host], equalTo(@"www.pivotaltracker.com"));
+            assertThat([[request URL] path], equalTo(@"/services/v3/projects"));
+        });
+
+        it(@"should use the GET method", ^{
+            assertThat([request HTTPMethod], equalTo(@"GET"));
+        });
+
+        it(@"should not use SSL", ^{
+            assertThat([[request URL] scheme], equalTo(@"http"));
+        });
+
+        it(@"should include the user's Tracker token in the request header", PENDING);
+
+        it(@"should add the new connection to the active connections", PENDING);
     });
 });
 

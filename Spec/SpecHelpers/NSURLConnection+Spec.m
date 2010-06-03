@@ -14,6 +14,10 @@
     return [self connectionsInternal];
 }
 
++ (void)resetAll {
+    [[self connectionsInternal] removeAllObjects];
+}
+
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate {
     return [self initWithRequest:request delegate:delegate startImmediately:YES];
 }

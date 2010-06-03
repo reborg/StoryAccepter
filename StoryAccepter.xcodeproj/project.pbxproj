@@ -97,6 +97,7 @@
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
 		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
+		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				AE17ECA111B6E632004C4DC0 /* LogIn */,
+				AEF6DDEC11B7221300F691B8 /* GetProjects */,
 			);
 			name = FakeResponses;
 			path = Spec/Fixtures/FakeResponses;
@@ -292,6 +294,14 @@
 				AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		AEF6DDEC11B7221300F691B8 /* GetProjects */ = {
+			isa = PBXGroup;
+			children = (
+				AEF6DDED11B7221B00F691B8 /* 200.txt */,
+			);
+			path = GetProjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

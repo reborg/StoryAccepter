@@ -6,6 +6,7 @@
 @interface NSURLConnection (Spec)
 
 + (NSArray *)connections;
++ (void)resetAll;
 
 - (NSURLRequest *)request;
 - (id<NSURLConnectionDelegate>)delegate;
