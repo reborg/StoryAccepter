@@ -10,5 +10,6 @@
 - (id)initForRequest:(NSString *)request;
 
 - (FakeHTTPURLResponse *)success;
+- (FakeHTTPURLResponse *)badRequest;
 
 @end

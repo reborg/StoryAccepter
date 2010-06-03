@@ -32,9 +32,17 @@ describe(@"Tracker", ^{
     describe(@"logInWithDelegate:", ^{
         beforeEach(^{
             [tracker logInWithDelegate:mockDelegate];
-            connection = [[NSURLConnection connections] lastObject];
+
+            // Specs that complete the connection (success or failure) will remove it from the list
+            // of active connections, which will release it.  Need to retain it here for specs that
+            // use it in expectations aren't using a freed object.
+            connection = [[[NSURLConnection connections] lastObject] retain];
 
             request = [connection request];
+        });
+
+        afterEach(^{
+            [connection release];
         });
 
         it(@"should send one HTTP request", ^{
@@ -113,19 +121,63 @@ describe(@"Tracker", ^{
 
             describe(@"when the client chooses to cancel the authentication challenge", ^{
                 beforeEach(^{
-                    [[connection delegate] connection:connection didCancelAuthenticationChallenge:nil];
+                    id mockChallenge = [OCMockObject mockForClass:[NSURLAuthenticationChallenge class]];
+
+                    [[mockDelegate expect] connection:connection didCancelAuthenticationChallenge:mockChallenge];
+                    [[connection delegate] connection:connection didCancelAuthenticationChallenge:mockChallenge];
                 });
 
-                it(@"should remove the connection from the active connections", PENDING);
+                it(@"should remove the connection from the active connections", ^{
+                    assertThat([tracker activeConnections], isNot(hasItem(connection)));
+                });
+
+                it(@"should notify the connection delegate", ^{
+                    [mockDelegate verify];
+                });
             });
         });
 
         describe(@"on failure", ^{
-            it(@"should pass along the failure response", PENDING);
+            beforeEach(^{
+                FakeHTTPURLResponse *response = [[FakeResponses responsesForRequest:@"LogIn"] badRequest];
+                [[mockDelegate expect] connection:connection didReceiveResponse:response];
+                [[mockDelegate expect] connectionDidFinishLoading:connection];
+
+                [connection returnResponse:response];
+            });
+
+            it(@"should pass along the failure response, and notify the delegate when the request has completed", ^{
+                [mockDelegate verify];
+            });
+
+            it(@"should remove the connection from the active connections", ^{
+                assertThat([tracker activeConnections], isNot(hasItem(connection)));
+            });
+
+            it(@"should not set the token", ^{
+                assertThat([tracker token], nilValue());
+            });
         });
 
         describe(@"on connection error", ^{
-            it(@"should notify the delegate of the error", PENDING);
+            beforeEach(^{
+                NSError *error = [NSError errorWithDomain:@"StoryAccepter" code:-1 userInfo:nil];
+                [[mockDelegate expect] connection:connection didFailWithError:error];
+
+                [[connection delegate] connection:connection didFailWithError:error];
+            });
+
+            it(@"should notify the delegate of the error", ^{
+                [mockDelegate verify];
+            });
+
+            it(@"should remove the connection from the active connections", ^{
+                assertThat([tracker activeConnections], isNot(hasItem(connection)));
+            });
+
+            it(@"should not set the token", ^{
+                assertThat([tracker token], nilValue());
+            });
         });
     });
 
@@ -163,7 +215,11 @@ describe(@"Tracker", ^{
             assertThat([request valueForHTTPHeaderField:@"X-TrackerToken"], equalTo(token));
         });
 
-        it(@"should add the new connection to the active connections", PENDING);
+        it(@"should add the new connection to the active connections", ^{
+            assertThat([tracker activeConnections], hasItem(connection));
+        });
+
+        // TODO !!! Pending specs!
     });
 });
 

@@ -36,7 +36,8 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [NSException raise:@"NotImplemented" format:@"Not implemented"];
+    [delegate_ connection:connection didFailWithError:error];
+    [tracker_ clearConnection:connection];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -45,6 +46,11 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     [delegate_ connection:connection didReceiveAuthenticationChallenge:challenge];
+}
+
+- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    [delegate_ connection:connection didCancelAuthenticationChallenge:challenge];
+    [tracker_ clearConnection:connection];
 }
 
 @end

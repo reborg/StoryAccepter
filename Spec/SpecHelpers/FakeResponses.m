@@ -28,6 +28,10 @@
     return [self responseForStatusCode:200];
 }
 
+- (FakeHTTPURLResponse *)badRequest {
+    return [self responseForStatusCode:400];
+}
+
 #pragma mark private interface
 
 static const NSString *FAKE_RESPONSES_DIRECTORY = @"../../Spec/Fixtures/FakeResponses";

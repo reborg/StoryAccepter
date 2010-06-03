@@ -97,6 +97,7 @@
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
 		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
+		AED41B1F11B81383006DBB00 /* 400.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 400.txt; sourceTree = "<group>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				AE17ECA211B6E632004C4DC0 /* 200.txt */,
+				AED41B1F11B81383006DBB00 /* 400.txt */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
