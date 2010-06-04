@@ -22,6 +22,12 @@
 		AE9C169811B5BFCC007BE2ED /* OCHamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
 		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
 		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
+		AEA6DD4011B96F98008420CB /* LandingAgentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6DD3F11B96F98008420CB /* LandingAgentSpec.m */; };
+		AEA6DD8311B97A7D008420CB /* LandingAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DD8111B97A7D008420CB /* LandingAgent.h */; };
+		AEA6DD8411B97A7D008420CB /* LandingAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6DD8211B97A7D008420CB /* LandingAgent.m */; };
+		AEA6DDAC11B9812C008420CB /* StoryAccepterEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */; };
+		AEA6DDAD11B9812C008420CB /* StoryAccepterEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */; };
+		AEA6DE8211B98CA9008420CB /* LandingAgentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */; };
 		AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */; };
 		AED41B7911B81C2D006DBB00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41B7811B81C2D006DBB00 /* UIKit.framework */; };
 		AED41C4611B81FBE006DBB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C4511B81FBE006DBB00 /* main.m */; };
@@ -100,17 +106,23 @@
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
 		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
-		AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackerSpec.m; path = Spec/Domain/Interfaces/TrackerSpec.m; sourceTree = "<group>"; };
-		AE9C161B11B5A72A007BE2ED /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tracker.h; path = App/Domain/Interfaces/Tracker.h; sourceTree = "<group>"; };
-		AE9C161C11B5A72A007BE2ED /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tracker.m; path = App/Domain/Interfaces/Tracker.m; sourceTree = "<group>"; };
+		AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackerSpec.m; sourceTree = "<group>"; };
+		AE9C161B11B5A72A007BE2ED /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		AE9C161C11B5A72A007BE2ED /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
 		AE9C162211B5A747007BE2ED /* libDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C162E11B5A77B007BE2ED /* StoryAccepter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryAccepter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C163011B5A77B007BE2ED /* StoryAccepter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryAccepter-Info.plist"; sourceTree = "<group>"; };
-		AE9C164911B5BEAF007BE2ED /* NSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSURLConnectionDelegate.h; path = App/Domain/Interfaces/NSURLConnectionDelegate.h; sourceTree = "<group>"; };
-		AE9C168A11B5BF68007BE2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Spec/Domain/main.m; sourceTree = "<group>"; };
+		AE9C164911B5BEAF007BE2ED /* NSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		AE9C168A11B5BF68007BE2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
 		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
+		AEA6DD3F11B96F98008420CB /* LandingAgentSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingAgentSpec.m; sourceTree = "<group>"; };
+		AEA6DD8111B97A7D008420CB /* LandingAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingAgent.h; sourceTree = "<group>"; };
+		AEA6DD8211B97A7D008420CB /* LandingAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingAgent.m; sourceTree = "<group>"; };
+		AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAccepterEnvironment.h; sourceTree = "<group>"; };
+		AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAccepterEnvironment.m; sourceTree = "<group>"; };
+		AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingAgentDelegate.h; sourceTree = "<group>"; };
 		AED41B1F11B81383006DBB00 /* 400.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 400.txt; sourceTree = "<group>"; };
 		AED41B6E11B81BC6006DBB00 /* StoryAccepterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryAccepterAppDelegate.h; path = App/UI/StoryAccepterAppDelegate.h; sourceTree = "<group>"; };
 		AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryAccepterAppDelegate.m; path = App/UI/StoryAccepterAppDelegate.m; sourceTree = "<group>"; };
@@ -119,7 +131,7 @@
 		AED41C7211B82151006DBB00 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = App/UI/Controllers/LandingViewController.h; sourceTree = "<group>"; };
 		AED41C7311B82151006DBB00 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = App/UI/Controllers/LandingViewController.m; sourceTree = "<group>"; };
 		AED41C7A11B821B8006DBB00 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
-		AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSXMLParserDelegate.h; path = App/Domain/Extensions/NSXMLParserDelegate.h; sourceTree = "<group>"; };
+		AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMLParserDelegate.h; sourceTree = "<group>"; };
 		AED41D2D11B84C86006DBB00 /* StoryAccepterSpec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryAccepterSpec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED41D2F11B84C86006DBB00 /* StoryAccepterSpec-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryAccepterSpec-Info.plist"; sourceTree = "<group>"; };
 		AED41DEF11B84CEA006DBB00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Spec/UI/main.m; sourceTree = "<group>"; };
@@ -265,11 +277,13 @@
 		AE9C160211B5A5A3007BE2ED /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AEA6DD3D11B96F71008420CB /* Agents */,
 				AE9C160611B5A5C6007BE2ED /* Interfaces */,
 				AE9C174311B5CC40007BE2ED /* Pages */,
 				AE9C168A11B5BF68007BE2ED /* main.m */,
 			);
 			name = Domain;
+			path = Spec/Domain;
 			sourceTree = "<group>";
 		};
 		AE9C160311B5A5B6007BE2ED /* UI */ = {
@@ -285,10 +299,14 @@
 		AE9C160411B5A5BC007BE2ED /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AEA6DD8011B979E3008420CB /* Agents */,
 				AED41CCA11B83800006DBB00 /* Extensions */,
 				AE9C160711B5A5D1007BE2ED /* Interfaces */,
+				AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */,
+				AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */,
 			);
 			name = Domain;
+			path = App/Domain;
 			sourceTree = "<group>";
 		};
 		AE9C160511B5A5C1007BE2ED /* UI */ = {
@@ -308,7 +326,7 @@
 			children = (
 				AE9C160A11B5A69F007BE2ED /* TrackerSpec.m */,
 			);
-			name = Interfaces;
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		AE9C160711B5A5D1007BE2ED /* Interfaces */ = {
@@ -318,7 +336,7 @@
 				AE9C161B11B5A72A007BE2ED /* Tracker.h */,
 				AE9C161C11B5A72A007BE2ED /* Tracker.m */,
 			);
-			name = Interfaces;
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		AE9C173911B5CB16007BE2ED /* SpecHelpers */ = {
@@ -341,6 +359,24 @@
 				AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		AEA6DD3D11B96F71008420CB /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6DD3F11B96F98008420CB /* LandingAgentSpec.m */,
+			);
+			path = Agents;
+			sourceTree = "<group>";
+		};
+		AEA6DD8011B979E3008420CB /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6DD8111B97A7D008420CB /* LandingAgent.h */,
+				AEA6DD8211B97A7D008420CB /* LandingAgent.m */,
+				AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */,
+			);
+			path = Agents;
 			sourceTree = "<group>";
 		};
 		AED41C7711B82155006DBB00 /* Controllers */ = {
@@ -367,7 +403,7 @@
 			children = (
 				AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AED41F6B11B86F8C006DBB00 /* Cedar */ = {
@@ -415,6 +451,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9C164A11B5BEAF007BE2ED /* NSURLConnectionDelegate.h in Headers */,
+				AEA6DD8311B97A7D008420CB /* LandingAgent.h in Headers */,
+				AEA6DDAC11B9812C008420CB /* StoryAccepterEnvironment.h in Headers */,
+				AEA6DE8211B98CA9008420CB /* LandingAgentDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +593,7 @@
 				AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */,
 				AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */,
 				AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */,
+				AEA6DD4011B96F98008420CB /* LandingAgentSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +602,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9C167F11B5BF43007BE2ED /* Tracker.m in Sources */,
+				AEA6DD8411B97A7D008420CB /* LandingAgent.m in Sources */,
+				AEA6DDAD11B9812C008420CB /* StoryAccepterEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
