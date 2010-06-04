@@ -2,18 +2,18 @@
 
 @implementation LandingViewController
 
+@synthesize logoImageView = logoImageView_;
+
 - (id)init {
     if ((self = [super initWithNibName:@"LandingViewController" bundle:nil])) {
     }
     return self;
 }
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)dealloc {
+    [self viewDidUnload];
+    [super dealloc];
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -23,23 +23,9 @@
 }
 */
 
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
-}
-
 - (void)viewDidUnload {
+    self.logoImageView = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
-
-
-- (void)dealloc {
-    [super dealloc];
-}
-
 
 @end

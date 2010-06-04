@@ -22,7 +22,6 @@
 		AE9C169811B5BFCC007BE2ED /* OCHamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
 		AE9C169911B5BFCC007BE2ED /* Cedar.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
 		AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
-		AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */; };
 		AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */; };
 		AED41B7911B81C2D006DBB00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41B7811B81C2D006DBB00 /* UIKit.framework */; };
 		AED41C4611B81FBE006DBB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C4511B81FBE006DBB00 /* main.m */; };
@@ -36,6 +35,10 @@
 		AED41F7011B86FA3006DBB00 /* SpecHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AED41F6E11B86FA3006DBB00 /* SpecHelper.h */; };
 		AED41FB611B8728D006DBB00 /* LandingViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41FB511B8728D006DBB00 /* LandingViewControllerSpec.m */; };
 		AED41FDF11B87583006DBB00 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41FDE11B87583006DBB00 /* PLBlocks.framework */; };
+		AED7061511B87E15001A404D /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C7311B82151006DBB00 /* LandingViewController.m */; };
+		AED7065611B892CF001A404D /* pivotalchicken.png in Resources */ = {isa = PBXBuildFile; fileRef = AED7065511B892CF001A404D /* pivotalchicken.png */; };
+		AED7069A11B89485001A404D /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED41C7A11B821B8006DBB00 /* LandingViewController.xib */; };
+		AED706EE11B8A280001A404D /* pivotalchicken.png in Resources */ = {isa = PBXBuildFile; fileRef = AED7065511B892CF001A404D /* pivotalchicken.png */; };
 		AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AE9C162111B5A747007BE2ED;
 			remoteInfo = Domain;
+		};
+		AED7067211B893B4001A404D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9C162D11B5A77B007BE2ED;
+			remoteInfo = StoryAccepter;
 		};
 		AED8C43B11B87BCA005374AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -86,7 +96,6 @@
 		AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHTTPURLResponse.h; sourceTree = "<group>"; };
 		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
 		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
-		AE17ECC811B6E86F004C4DC0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
@@ -121,6 +130,7 @@
 		AED41FBD11B87344006DBB00 /* CDRExampleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRExampleBase.h; sourceTree = "<group>"; };
 		AED41FBE11B87344006DBB00 /* CDRSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRSpec.h; sourceTree = "<group>"; };
 		AED41FDE11B87583006DBB00 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLBlocks.framework; sourceTree = "<group>"; };
+		AED7065511B892CF001A404D /* pivotalchicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pivotalchicken.png; sourceTree = "<group>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +185,6 @@
 				08FB779DFE84155DC02AAC07 /* Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				AE9C163011B5A77B007BE2ED /* StoryAccepter-Info.plist */,
-				AE17ECC811B6E86F004C4DC0 /* README */,
 				AED41D2F11B84C86006DBB00 /* StoryAccepterSpec-Info.plist */,
 			);
 			name = Accepter;
@@ -346,6 +355,7 @@
 		AED41C7911B821B8006DBB00 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AED7065511B892CF001A404D /* pivotalchicken.png */,
 				AED41C7A11B821B8006DBB00 /* LandingViewController.xib */,
 			);
 			name = Resources;
@@ -486,6 +496,7 @@
 			);
 			dependencies = (
 				AED8C43C11B87BCA005374AC /* PBXTargetDependency */,
+				AED7067311B893B4001A404D /* PBXTargetDependency */,
 			);
 			name = StoryAccepterSpec;
 			productName = StoryAccepterSpec;
@@ -518,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED41C7B11B821B8006DBB00 /* LandingViewController.xib in Resources */,
+				AED7065611B892CF001A404D /* pivotalchicken.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +537,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED7069A11B89485001A404D /* LandingViewController.xib in Resources */,
+				AED706EE11B8A280001A404D /* pivotalchicken.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +552,6 @@
 				AE9C160B11B5A69F007BE2ED /* TrackerSpec.m in Sources */,
 				AE9C168B11B5BF68007BE2ED /* main.m in Sources */,
 				AE9C173C11B5CB16007BE2ED /* NSURLConnection+Spec.m in Sources */,
-				AE9C174511B5CC6C007BE2ED /* LandingPageSpec.m in Sources */,
 				AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */,
 				AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */,
 			);
@@ -568,6 +581,7 @@
 			files = (
 				AED41DF011B84CEA006DBB00 /* main.m in Sources */,
 				AED41FB611B8728D006DBB00 /* LandingViewControllerSpec.m in Sources */,
+				AED7061511B87E15001A404D /* LandingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +597,11 @@
 			isa = PBXTargetDependency;
 			target = AE9C162111B5A747007BE2ED /* Domain */;
 			targetProxy = AE9C163911B5A7B6007BE2ED /* PBXContainerItemProxy */;
+		};
+		AED7067311B893B4001A404D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9C162D11B5A77B007BE2ED /* StoryAccepter */;
+			targetProxy = AED7067211B893B4001A404D /* PBXContainerItemProxy */;
 		};
 		AED8C43C11B87BCA005374AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -722,7 +741,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = StoryAccepter;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphonesimulator3.1.3;
 			};
 			name = Debug;
 		};
@@ -751,7 +770,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = StoryAccepter;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphonesimulator3.1.3;
 				ZERO_LINK = NO;
 			};
 			name = Release;
