@@ -39,21 +39,24 @@ describe(@"LandingAgent", ^{
         describe(@"on authentication challenge", ^{
             __block NSURLAuthenticationChallenge *challenge;
             __block id mockChallengeSender;
+            __block id mockFailedCredential;
+            __block void (^sendChallenge)(void);
 
             beforeEach(^{
                 id mockProtectionSpace = [OCMockObject mockForClass:[NSURLProtectionSpace class]];
-                id mockFailedCredential =  [OCMockObject mockForClass:[NSURLCredential class]];
                 id mockFailureResponse = [OCMockObject mockForClass:[NSURLResponse class]];
-                mockChallengeSender = [OCMockObject mockForProtocol:@protocol(NSURLAuthenticationChallengeSender)];
+                mockFailedCredential =  [OCMockObject mockForClass:[NSURLCredential class]];
+                mockChallengeSender = [OCMockObject niceMockForProtocol:@protocol(NSURLAuthenticationChallengeSender)];
                 challenge = [[NSURLAuthenticationChallenge alloc] initWithProtectionSpace:mockProtectionSpace
                                                                        proposedCredential:mockFailedCredential
                                                                      previousFailureCount:1
                                                                           failureResponse:mockFailureResponse
                                                                                     error:nil
                                                                                    sender:mockChallengeSender];
-                [[mockAgentDelegate expect] newLogInCredential:mockFailedCredential];
+                sendChallenge = [^{
+                    [[logInConnection delegate] connection:logInConnection didReceiveAuthenticationChallenge:challenge];
+                } copy];
 
-                [[logInConnection delegate] connection:logInConnection didReceiveAuthenticationChallenge:challenge];
             });
 
             afterEach(^{
@@ -61,15 +64,36 @@ describe(@"LandingAgent", ^{
             });
 
             it(@"should ask the delegate for new credentials", ^{
+                [[mockAgentDelegate expect] newLogInCredential:mockFailedCredential];
+                sendChallenge();
                 [mockAgentDelegate verify];
             });
 
             describe(@"when the delegate provides a new credential object", ^{
-                it(@"should pass the new credential object back to the challenge sender", PENDING);
+                __block NSURLCredential *newCredential;
+
+                beforeEach(^{
+                    newCredential = [OCMockObject mockForClass:[NSURLCredential class]];
+                    [[[mockAgentDelegate expect] andReturn:newCredential] newLogInCredential:mockFailedCredential];
+                });
+
+                it(@"should pass the new credential object back to the challenge sender", ^{
+                    [[mockChallengeSender expect] useCredential:newCredential forAuthenticationChallenge:challenge];
+                    sendChallenge();
+                    [mockChallengeSender verify];
+                });
             });
 
             describe(@"when the delegate does not provide a new credential object", ^{
-                it(@"should ask the challenge sender to cancel the challenge", PENDING);
+                beforeEach(^{
+                    [[[mockAgentDelegate expect] andReturn:nil] newLogInCredential:mockFailedCredential];
+                });
+
+                it(@"should ask the challenge sender to cancel the challenge", ^{
+                    [[mockChallengeSender expect] cancelAuthenticationChallenge:challenge];
+                    sendChallenge();
+                    [mockChallengeSender verify];
+                });
             });
         });
     });

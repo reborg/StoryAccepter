@@ -27,7 +27,12 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    [delegate_ newLogInCredential:[challenge proposedCredential]];
+    NSURLCredential *newCredential = [delegate_ newLogInCredential:[challenge proposedCredential]];
+    if (newCredential) {
+        [[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+    } else {
+        [[challenge sender] cancelAuthenticationChallenge:challenge];
+    }
 }
 
 @end
