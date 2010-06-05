@@ -24,11 +24,11 @@ describe(@"LandingAgent", ^{
         [agent release];
     });
 
-    describe(@"#load", ^{
+    describe(@"logIn", ^{
         __block NSURLConnection *logInConnection;
 
         beforeEach(^{
-            [agent load];
+            [agent logIn];
             logInConnection = [[NSURLConnection connections] lastObject];
         });
 
@@ -73,7 +73,7 @@ describe(@"LandingAgent", ^{
                 __block NSURLCredential *newCredential;
 
                 beforeEach(^{
-                    newCredential = [OCMockObject mockForClass:[NSURLCredential class]];
+                    newCredential = [[OCMockObject mockForClass:[NSURLCredential class]] retain];
                     [[[mockAgentDelegate expect] andReturn:newCredential] newLogInCredential:mockFailedCredential];
                 });
 
@@ -81,6 +81,12 @@ describe(@"LandingAgent", ^{
                     [[mockChallengeSender expect] useCredential:newCredential forAuthenticationChallenge:challenge];
                     sendChallenge();
                     [mockChallengeSender verify];
+                });
+
+                it(@"should clean up the reference to the new credential", ^{
+                    int initialRetainCount = [newCredential retainCount];
+                    sendChallenge();
+                    assertThatInt([newCredential retainCount], equalToInt(initialRetainCount - 1));
                 });
             });
 

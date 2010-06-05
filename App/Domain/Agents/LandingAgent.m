@@ -12,18 +12,22 @@
     return self;
 }
 
-- (void)load {
+- (void)logIn {
     [[[StoryAccepterEnvironment environment] trackerInterface] logInWithDelegate:self];
 }
 
 #pragma mark NSURLConnectionDelegate
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [[NSException exceptionWithName:@"NotImplemented" reason:@"implement me" userInfo:nil] raise];
+    [[NSException exceptionWithName:@"NotImplemented" reason:@"error" userInfo:nil] raise];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [[NSException exceptionWithName:@"NotImplemented" reason:@"implement me" userInfo:nil] raise];
+
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
@@ -33,6 +37,7 @@
     } else {
         [[challenge sender] cancelAuthenticationChallenge:challenge];
     }
+    [newCredential release];
 }
 
 @end

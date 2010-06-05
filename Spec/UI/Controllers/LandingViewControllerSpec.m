@@ -15,6 +15,8 @@ describe(@"LandingViewController", ^{
         [controller release];
     });
 
+    it(@"should instantiate an appropriate agent", PENDING);
+
     describe(@"viewDidLoad", ^{
         beforeEach(^{
             [controller viewDidLoad];
@@ -35,10 +37,15 @@ describe(@"LandingViewController", ^{
         });
 
         it(@"should set the logo image view to nil", ^{
+            // TODO !!! matchers
             if (controller.logoImageView) {
                 fail(@"Logo image not released by viewDidUnload");
             }
         });
+    });
+
+    describe(@"logIn", ^{
+        it(@"should push a modal logInController", PENDING);
     });
 });
 

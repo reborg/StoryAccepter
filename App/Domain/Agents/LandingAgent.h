@@ -9,6 +9,6 @@
 
 - (id)initWithDelegate:(id<LandingAgentDelegate>)delegate;
 
-- (void)load;
+- (void)logIn;
 
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17E9C811B5D265004C4DC0 /* FakeResponses.m */; };
 		AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */; };
+		AE2B9E5E11B9F3F600DC1BF2 /* LogInViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */; };
+		AE2B9E6A11B9F4A900DC1BF2 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */; };
+		AE2B9E8A11B9F60100DC1BF2 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */; };
 		AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
 		AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
 		AE9C15FE11B5A559007BE2ED /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C15F011B5A54F007BE2ED /* Cedar.framework */; };
@@ -28,6 +31,10 @@
 		AEA6DDAC11B9812C008420CB /* StoryAccepterEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */; };
 		AEA6DDAD11B9812C008420CB /* StoryAccepterEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */; };
 		AEA6DE8211B98CA9008420CB /* LandingAgentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */; };
+		AEA6E0BF11B9B6D1008420CB /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
+		AEBAB0EE11B9D9C20085EC6E /* CedarApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */; };
+		AEBCE80611B9EDBA00CAD25E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */; };
+		AEBCE80811B9EDD700CAD25E /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */; };
 		AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */; };
 		AED41B7911B81C2D006DBB00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41B7811B81C2D006DBB00 /* UIKit.framework */; };
 		AED41C4611B81FBE006DBB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C4511B81FBE006DBB00 /* main.m */; };
@@ -102,7 +109,8 @@
 		AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHTTPURLResponse.h; sourceTree = "<group>"; };
 		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
 		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
-		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewControllerSpec.m; sourceTree = "<group>"; };
+		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
 		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
@@ -123,13 +131,17 @@
 		AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAccepterEnvironment.h; sourceTree = "<group>"; };
 		AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAccepterEnvironment.m; sourceTree = "<group>"; };
 		AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingAgentDelegate.h; sourceTree = "<group>"; };
+		AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarApplicationDelegate.h; sourceTree = "<group>"; };
+		AEBCE80411B9EDBA00CAD25E /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		AED41B1F11B81383006DBB00 /* 400.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 400.txt; sourceTree = "<group>"; };
-		AED41B6E11B81BC6006DBB00 /* StoryAccepterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryAccepterAppDelegate.h; path = App/UI/StoryAccepterAppDelegate.h; sourceTree = "<group>"; };
-		AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryAccepterAppDelegate.m; path = App/UI/StoryAccepterAppDelegate.m; sourceTree = "<group>"; };
+		AED41B6E11B81BC6006DBB00 /* StoryAccepterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAccepterAppDelegate.h; sourceTree = "<group>"; };
+		AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAccepterAppDelegate.m; sourceTree = "<group>"; };
 		AED41B7811B81C2D006DBB00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AED41C4511B81FBE006DBB00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = App/UI/main.m; sourceTree = "<group>"; };
-		AED41C7211B82151006DBB00 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = App/UI/Controllers/LandingViewController.h; sourceTree = "<group>"; };
-		AED41C7311B82151006DBB00 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = App/UI/Controllers/LandingViewController.m; sourceTree = "<group>"; };
+		AED41C4511B81FBE006DBB00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AED41C7211B82151006DBB00 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		AED41C7311B82151006DBB00 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		AED41C7A11B821B8006DBB00 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		AED41CCB11B8383F006DBB00 /* NSXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMLParserDelegate.h; sourceTree = "<group>"; };
 		AED41D2D11B84C86006DBB00 /* StoryAccepterSpec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryAccepterSpec.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,7 +272,7 @@
 				AE9C160511B5A5C1007BE2ED /* UI */,
 				AE9C160411B5A5BC007BE2ED /* Domain */,
 			);
-			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
 		AE9C160011B5A56F007BE2ED /* Spec */ = {
@@ -305,8 +317,7 @@
 				AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */,
 				AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */,
 			);
-			name = Domain;
-			path = App/Domain;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		AE9C160511B5A5C1007BE2ED /* UI */ = {
@@ -318,7 +329,7 @@
 				AED41C4511B81FBE006DBB00 /* main.m */,
 				AED41C7911B821B8006DBB00 /* Resources */,
 			);
-			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		AE9C160611B5A5C6007BE2ED /* Interfaces */ = {
@@ -384,8 +395,10 @@
 			children = (
 				AED41C7211B82151006DBB00 /* LandingViewController.h */,
 				AED41C7311B82151006DBB00 /* LandingViewController.m */,
+				AEBCE80411B9EDBA00CAD25E /* LogInViewController.h */,
+				AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AED41C7911B821B8006DBB00 /* Resources */ = {
@@ -393,9 +406,9 @@
 			children = (
 				AED7065511B892CF001A404D /* pivotalchicken.png */,
 				AED41C7A11B821B8006DBB00 /* LandingViewController.xib */,
+				AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */,
 			);
-			name = Resources;
-			path = App/UI/Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AED41CCA11B83800006DBB00 /* Extensions */ = {
@@ -418,6 +431,7 @@
 		AED41F6C11B86F8C006DBB00 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */,
 				AED41FBD11B87344006DBB00 /* CDRExampleBase.h */,
 				AED41FBE11B87344006DBB00 /* CDRSpec.h */,
 				AED41F6D11B86FA3006DBB00 /* Cedar.h */,
@@ -430,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				AED41FB511B8728D006DBB00 /* LandingViewControllerSpec.m */,
+				AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */,
 			);
 			name = Controllers;
 			path = Spec/UI/Controllers;
@@ -463,6 +478,7 @@
 			files = (
 				AED41F6F11B86FA3006DBB00 /* Cedar.h in Headers */,
 				AED41F7011B86FA3006DBB00 /* SpecHelper.h in Headers */,
+				AEBAB0EE11B9D9C20085EC6E /* CedarApplicationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +585,7 @@
 			files = (
 				AED41C7B11B821B8006DBB00 /* LandingViewController.xib in Resources */,
 				AED7065611B892CF001A404D /* pivotalchicken.png in Resources */,
+				AEBCE80811B9EDD700CAD25E /* LogInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +595,7 @@
 			files = (
 				AED7069A11B89485001A404D /* LandingViewController.xib in Resources */,
 				AED706EE11B8A280001A404D /* pivotalchicken.png in Resources */,
+				AE2B9E8A11B9F60100DC1BF2 /* LogInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +632,7 @@
 				AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */,
 				AED41C4611B81FBE006DBB00 /* main.m in Sources */,
 				AED41C7511B82151006DBB00 /* LandingViewController.m in Sources */,
+				AEBCE80611B9EDBA00CAD25E /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +643,9 @@
 				AED41DF011B84CEA006DBB00 /* main.m in Sources */,
 				AED41FB611B8728D006DBB00 /* LandingViewControllerSpec.m in Sources */,
 				AED7061511B87E15001A404D /* LandingViewController.m in Sources */,
+				AEA6E0BF11B9B6D1008420CB /* NSURLConnection+Spec.m in Sources */,
+				AE2B9E5E11B9F3F600DC1BF2 /* LogInViewControllerSpec.m in Sources */,
+				AE2B9E6A11B9F4A900DC1BF2 /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

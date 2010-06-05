@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
         return retVal;
     } @catch (NSString *x) {
         NSLog(@"=====================> NSString exception: %@", x);
-    } @catch ( NSError *x) {
-        NSLog(@"=====================> NSError: %@", x);
+    } @catch (NSException *x) {
+        NSLog(@"=====================> NSException: %@", x);
     }
 }

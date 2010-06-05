@@ -42,7 +42,9 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [delegate_ connection:connection didReceiveResponse:response];
+    if ([delegate_ respondsToSelector:@selector(connection:didReceiveResponse:)]) {
+        [delegate_ connection:connection didReceiveResponse:response];
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {

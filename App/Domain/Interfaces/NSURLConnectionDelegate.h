@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@protocol NSURLConnectionDelegate
+@protocol NSURLConnectionDelegate <NSObject>
 
 @required
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
