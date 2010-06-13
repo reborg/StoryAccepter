@@ -124,7 +124,6 @@
 		AE9C168A11B5BF68007BE2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE9C173A11B5CB16007BE2ED /* NSURLConnection+Spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+Spec.h"; sourceTree = "<group>"; };
 		AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+Spec.m"; sourceTree = "<group>"; };
-		AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingPageSpec.m; path = Spec/Domain/Pages/LandingPageSpec.m; sourceTree = "<group>"; };
 		AEA6DD3F11B96F98008420CB /* LandingAgentSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingAgentSpec.m; sourceTree = "<group>"; };
 		AEA6DD8111B97A7D008420CB /* LandingAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingAgent.h; sourceTree = "<group>"; };
 		AEA6DD8211B97A7D008420CB /* LandingAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingAgent.m; sourceTree = "<group>"; };
@@ -291,7 +290,6 @@
 			children = (
 				AEA6DD3D11B96F71008420CB /* Agents */,
 				AE9C160611B5A5C6007BE2ED /* Interfaces */,
-				AE9C174311B5CC40007BE2ED /* Pages */,
 				AE9C168A11B5BF68007BE2ED /* main.m */,
 			);
 			name = Domain;
@@ -362,14 +360,6 @@
 			);
 			name = SpecHelpers;
 			path = Spec/SpecHelpers;
-			sourceTree = "<group>";
-		};
-		AE9C174311B5CC40007BE2ED /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-				AE9C174411B5CC6C007BE2ED /* LandingPageSpec.m */,
-			);
-			name = Pages;
 			sourceTree = "<group>";
 		};
 		AEA6DD3D11B96F71008420CB /* Agents */ = {

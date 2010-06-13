@@ -3,7 +3,7 @@
 
 @implementation StoryAccepterEnvironment
 
-static StoryAccepterEnvironment *environment__ = nil;\
+static StoryAccepterEnvironment *environment__ = nil;
 + (StoryAccepterEnvironment *)environment {
     if (!environment__) {
         environment__ = [[StoryAccepterEnvironment alloc] init];

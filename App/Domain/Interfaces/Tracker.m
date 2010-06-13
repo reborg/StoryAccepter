@@ -2,6 +2,11 @@
 #import "NSURLConnectionDelegate.h"
 #import "NSXMLParserDelegate.h"
 
+#define TRACKER_PROTOCOL "https://"
+#define TRACKER_HOST "www.pivotaltracker.com/"
+#define TRACKER_API_BASE_URI "services/v3/"
+static NSURL *BASE_URL = nil;
+
 @interface TrackerConnection : NSURLConnection <NSURLConnectionDelegate> {
     Tracker *tracker_;
     id<NSURLConnectionDelegate> delegate_;
@@ -128,12 +133,15 @@
 
 @interface Tracker (private)
 - (NSURLConnection *)connectionOfClass:(Class)class forPath:(NSString *)path andDelegate:(id<NSURLConnectionDelegate>)delegate secure:(BOOL)secure;
-- (NSURL *)newBaseURLWithSSL:(BOOL)secure;
 @end
 
 @implementation Tracker
 
 @synthesize activeConnections = activeConnections_, token = token_;
+
++ (void)initialize {
+    BASE_URL = [[NSURL alloc] initWithString:@TRACKER_PROTOCOL TRACKER_HOST TRACKER_API_BASE_URI];
+}
 
 - (id)init {
     if (self = [super init]) {
@@ -165,8 +173,7 @@
 #pragma mark private interface
 
 - (NSURLConnection *)connectionOfClass:(Class)class forPath:(NSString *)path andDelegate:(id<NSURLConnectionDelegate>)delegate secure:(BOOL)secure {
-    NSURL *baseUrl = [self newBaseURLWithSSL:secure];
-    NSURL *url = [[NSURL alloc] initWithString:path relativeToURL:baseUrl];
+    NSURL *url = [[NSURL alloc] initWithString:path relativeToURL:BASE_URL];
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setValue:token_ forHTTPHeaderField:@"X-TrackerToken"];
@@ -177,17 +184,8 @@
     [connection release];
     [request release];
     [url release];
-    [baseUrl release];
 
     return connection;
-}
-
-- (NSURL *)newBaseURLWithSSL:(BOOL)secure {
-    if (secure) {
-        return [[NSURL alloc] initWithString:@"https://" TRACKER_HOST TRACKER_API_BASE_URI];
-    } else {
-        return [[NSURL alloc] initWithString:@"http://" TRACKER_HOST TRACKER_API_BASE_URI];
-    }
 }
 
 @end

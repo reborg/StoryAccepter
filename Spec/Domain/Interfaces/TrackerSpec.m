@@ -35,7 +35,7 @@ describe(@"Tracker", ^{
 
             // Specs that complete the connection (success or failure) will remove it from the list
             // of active connections, which will release it.  Need to retain it here for specs that
-            // use it in expectations aren't using a freed object.
+            // use it so expectations aren't using a freed object.
             connection = [[[NSURLConnection connections] lastObject] retain];
 
             request = [connection request];
@@ -207,8 +207,8 @@ describe(@"Tracker", ^{
             assertThat([request HTTPMethod], equalTo(@"GET"));
         });
 
-        it(@"should not use SSL", ^{
-            assertThat([[request URL] scheme], equalTo(@"http"));
+        it(@"should use SSL", ^{
+            assertThat([[request URL] scheme], equalTo(@"https"));
         });
 
         it(@"should include the user's Tracker token in the request header", ^{

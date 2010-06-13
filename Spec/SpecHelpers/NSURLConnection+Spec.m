@@ -2,20 +2,23 @@
 #import "FakeHTTPURLResponse.h"
 #import "NSURLConnectionDelegate.h"
 
-@interface NSURLConnection (SpecPrivate)
-+ (NSMutableArray *)connectionsInternal;
-+ (NSMutableDictionary *)requestsByConnection;
-+ (NSMutableDictionary *)delegatesByConnection;
-@end
-
 @implementation NSURLConnection (Spec)
 
+static NSMutableArray *connections__;
+static NSMutableDictionary *requests__, *delegates__;
+
++ (void)initialize {
+    connections__ = [[NSMutableArray alloc] init];
+    requests__ = [[NSMutableDictionary alloc] init];
+    delegates__ = [[NSMutableDictionary alloc] init];
+}
+
 + (NSArray *)connections {
-    return [self connectionsInternal];
+    return connections__;
 }
 
 + (void)resetAll {
-    [[self connectionsInternal] removeAllObjects];
+    [connections__ removeAllObjects];
 }
 
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate {
@@ -24,10 +27,10 @@
 
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate startImmediately:(BOOL)startImmediately {
     if (self = [super init]) {
-        [[[self class] connectionsInternal] addObject:self];
+        [connections__ addObject:self];
 
-        CFDictionaryAddValue((CFMutableDictionaryRef)[[self class] requestsByConnection], self, request);
-        CFDictionaryAddValue((CFMutableDictionaryRef)[[self class] delegatesByConnection], self, delegate);
+        CFDictionaryAddValue((CFMutableDictionaryRef)requests__, self, request);
+        CFDictionaryAddValue((CFMutableDictionaryRef)delegates__, self, delegate);
     }
     return self;
 }
@@ -41,17 +44,17 @@
 }
 
 - (void)cancel {
-    [[[self class] connectionsInternal] removeObject:self];
-    [[[self class] requestsByConnection] removeObjectForKey:self];
-    [[[self class] delegatesByConnection] removeObjectForKey:self];
+    [connections__ removeObject:self];
+    [requests__ removeObjectForKey:self];
+    [delegates__ removeObjectForKey:self];
 }
 
 - (NSURLRequest *)request {
-    return [[[self class] requestsByConnection] objectForKey:self];
+    return [requests__ objectForKey:self];
 }
 
 - (id<NSURLConnectionDelegate>)delegate {
-    return [[[self class] delegatesByConnection] objectForKey:self];
+    return [delegates__ objectForKey:self];
 }
 
 - (void)returnResponse:(FakeHTTPURLResponse *)response {
@@ -70,31 +73,6 @@
     [[self delegate] connection:self didReceiveAuthenticationChallenge:challenge];
 
     [challenge release];
-}
-
-#pragma mark private methods
-
-static NSMutableArray *connections__;
-static NSMutableDictionary *requests__, *delegates__;
-+ (NSMutableArray *)connectionsInternal {
-    if (!connections__) {
-        connections__ = [[NSMutableArray alloc] init];
-    }
-    return connections__;
-}
-
-+ (NSMutableDictionary *)requestsByConnection {
-    if (!requests__) {
-        requests__ = [[NSMutableDictionary alloc] init];
-    }
-    return requests__;
-}
-
-+ (NSMutableDictionary *)delegatesByConnection {
-    if (!delegates__) {
-        delegates__ = [[NSMutableDictionary alloc] init];
-    }
-    return delegates__;
 }
 
 @end
