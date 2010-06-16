@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
-#import "Cedar.h"
-#import "CedarApplicationDelegate.h"
+#import <Cedar-iPhone/Cedar.h>
+#import <Cedar-iPhone/CedarApplicationDelegate.h>
 
 int main(int argc, char *argv[]) {
     // Builds that target the iPhone have to use Cedar as a static library.  Cedar includes an

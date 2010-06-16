@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0CDC5811C8329E00EF2275 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0CDC5711C8329E00EF2275 /* Cedar-iPhone.framework */; };
+		AE0CDC6411C832C500EF2275 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0CDC5711C8329E00EF2275 /* Cedar-iPhone.framework */; };
 		AE17E9C911B5D265004C4DC0 /* FakeResponses.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17E9C811B5D265004C4DC0 /* FakeResponses.m */; };
 		AE17EAB011B5E40A004C4DC0 /* FakeHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */; };
 		AE2B9E5E11B9F3F600DC1BF2 /* LogInViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */; };
@@ -32,7 +34,6 @@
 		AEA6DDAD11B9812C008420CB /* StoryAccepterEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */; };
 		AEA6DE8211B98CA9008420CB /* LandingAgentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */; };
 		AEA6E0BF11B9B6D1008420CB /* NSURLConnection+Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9C173B11B5CB16007BE2ED /* NSURLConnection+Spec.m */; };
-		AEBAB0EE11B9D9C20085EC6E /* CedarApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */; };
 		AEBCE80611B9EDBA00CAD25E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */; };
 		AEBCE80811B9EDD700CAD25E /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */; };
 		AED41B7011B81BC6006DBB00 /* StoryAccepterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41B6F11B81BC6006DBB00 /* StoryAccepterAppDelegate.m */; };
@@ -43,9 +44,6 @@
 		AED41DBB11B84C9B006DBB00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		AED41DBD11B84C9B006DBB00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41B7811B81C2D006DBB00 /* UIKit.framework */; };
 		AED41DF011B84CEA006DBB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41DEF11B84CEA006DBB00 /* main.m */; };
-		AED41F5311B86ADA006DBB00 /* libCedar-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41F5211B86ADA006DBB00 /* libCedar-iPhone.a */; };
-		AED41F6F11B86FA3006DBB00 /* Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = AED41F6D11B86FA3006DBB00 /* Cedar.h */; };
-		AED41F7011B86FA3006DBB00 /* SpecHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AED41F6E11B86FA3006DBB00 /* SpecHelper.h */; };
 		AED41FB611B8728D006DBB00 /* LandingViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41FB511B8728D006DBB00 /* LandingViewControllerSpec.m */; };
 		AED41FDF11B87583006DBB00 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED41FDE11B87583006DBB00 /* PLBlocks.framework */; };
 		AED7061511B87E15001A404D /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED41C7311B82151006DBB00 /* LandingViewController.m */; };
@@ -104,13 +102,14 @@
 
 /* Begin PBXFileReference section */
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		AE0CDC5711C8329E00EF2275 /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "/Users/pivotal/workspace/cedar/build/Release-iphoneuniversal/Cedar-iPhone.framework"; sourceTree = "<absolute>"; };
 		AE17E9C711B5D265004C4DC0 /* FakeResponses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeResponses.h; sourceTree = "<group>"; };
 		AE17E9C811B5D265004C4DC0 /* FakeResponses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeResponses.m; sourceTree = "<group>"; };
 		AE17EAAE11B5E40A004C4DC0 /* FakeHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHTTPURLResponse.h; sourceTree = "<group>"; };
 		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
 		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 		AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewControllerSpec.m; sourceTree = "<group>"; };
-		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/pivotal/workspace/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "/Users/pivotal/workspace/hamcrest-read-only/hamcrest-objectivec/Source/build/Release/OCHamcrest.framework"; sourceTree = "<absolute>"; };
 		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
@@ -130,7 +129,6 @@
 		AEA6DDAA11B9812C008420CB /* StoryAccepterEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAccepterEnvironment.h; sourceTree = "<group>"; };
 		AEA6DDAB11B9812C008420CB /* StoryAccepterEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAccepterEnvironment.m; sourceTree = "<group>"; };
 		AEA6DE8111B98CA9008420CB /* LandingAgentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingAgentDelegate.h; sourceTree = "<group>"; };
-		AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarApplicationDelegate.h; sourceTree = "<group>"; };
 		AEBCE80411B9EDBA00CAD25E /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
@@ -146,12 +144,7 @@
 		AED41D2D11B84C86006DBB00 /* StoryAccepterSpec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryAccepterSpec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED41D2F11B84C86006DBB00 /* StoryAccepterSpec-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryAccepterSpec-Info.plist"; sourceTree = "<group>"; };
 		AED41DEF11B84CEA006DBB00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Spec/UI/main.m; sourceTree = "<group>"; };
-		AED41F5211B86ADA006DBB00 /* libCedar-iPhone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCedar-iPhone.a"; path = "/Users/pivotal/workspace/cedar/build/Release-iphonesimulator/libCedar-iPhone.a"; sourceTree = "<absolute>"; };
-		AED41F6D11B86FA3006DBB00 /* Cedar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cedar.h; sourceTree = "<group>"; };
-		AED41F6E11B86FA3006DBB00 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		AED41FB511B8728D006DBB00 /* LandingViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewControllerSpec.m; sourceTree = "<group>"; };
-		AED41FBD11B87344006DBB00 /* CDRExampleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRExampleBase.h; sourceTree = "<group>"; };
-		AED41FBE11B87344006DBB00 /* CDRSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRSpec.h; sourceTree = "<group>"; };
 		AED41FDE11B87583006DBB00 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLBlocks.framework; sourceTree = "<group>"; };
 		AED7065511B892CF001A404D /* pivotalchicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pivotalchicken.png; sourceTree = "<group>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
@@ -166,6 +159,7 @@
 				AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */,
 				AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */,
 				AE9C163B11B5A7BF007BE2ED /* libDomain.a in Frameworks */,
+				AE0CDC5811C8329E00EF2275 /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +183,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0CDC6411C832C500EF2275 /* Cedar-iPhone.framework in Frameworks */,
 				AED41DBB11B84C9B006DBB00 /* Foundation.framework in Frameworks */,
 				AED41DBD11B84C9B006DBB00 /* UIKit.framework in Frameworks */,
-				AED41F5311B86ADA006DBB00 /* libCedar-iPhone.a in Frameworks */,
 				AED41FDF11B87583006DBB00 /* PLBlocks.framework in Frameworks */,
 				AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */,
 			);
@@ -217,12 +211,12 @@
 			isa = PBXGroup;
 			children = (
 				AED41FDE11B87583006DBB00 /* PLBlocks.framework */,
-				AED41F5211B86ADA006DBB00 /* libCedar-iPhone.a */,
 				AE9C159411B5A47F007BE2ED /* OCMock.framework */,
 				AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */,
 				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
 				AE9C15F011B5A54F007BE2ED /* Cedar.framework */,
 				AED41B7811B81C2D006DBB00 /* UIKit.framework */,
+				AE0CDC5711C8329E00EF2275 /* Cedar-iPhone.framework */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -300,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				AED41FB411B87271006DBB00 /* Controllers */,
-				AED41F6B11B86F8C006DBB00 /* Cedar */,
 				AED41DEF11B84CEA006DBB00 /* main.m */,
 			);
 			name = UI;
@@ -409,27 +402,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AED41F6B11B86F8C006DBB00 /* Cedar */ = {
-			isa = PBXGroup;
-			children = (
-				AED41F6C11B86F8C006DBB00 /* Headers */,
-			);
-			name = Cedar;
-			path = Spec/UI/Cedar;
-			sourceTree = "<group>";
-		};
-		AED41F6C11B86F8C006DBB00 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				AEBAB0ED11B9D9C20085EC6E /* CedarApplicationDelegate.h */,
-				AED41FBD11B87344006DBB00 /* CDRExampleBase.h */,
-				AED41FBE11B87344006DBB00 /* CDRSpec.h */,
-				AED41F6D11B86FA3006DBB00 /* Cedar.h */,
-				AED41F6E11B86FA3006DBB00 /* SpecHelper.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
 		AED41FB411B87271006DBB00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,9 +438,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED41F6F11B86FA3006DBB00 /* Cedar.h in Headers */,
-				AED41F7011B86FA3006DBB00 /* SpecHelper.h in Headers */,
-				AEBAB0EE11B9D9C20085EC6E /* CedarApplicationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +670,7 @@
 					"\"$(SRCROOT)/../OCMock 1.55\"",
 					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
 					"\"$(SRCROOT)/../cedar/build/Release\"",
+					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -729,6 +699,7 @@
 					"\"$(SRCROOT)/../OCMock 1.55\"",
 					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
 					"\"$(SRCROOT)/../cedar/build/Release\"",
+					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -842,6 +813,7 @@
 					"\"$(SRCROOT)/../OCMock 1.55\"",
 					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -881,6 +853,7 @@
 					"\"$(SRCROOT)/../OCMock 1.55\"",
 					"\"$(SRCROOT)/../hamcrest-read-only/hamcrest-objectivec/Source/build/Release\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

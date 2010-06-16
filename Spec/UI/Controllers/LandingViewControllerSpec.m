@@ -1,4 +1,4 @@
-#import "SpecHelper.h"
+#import <Cedar-iPhone/SpecHelper.h>
 #import "LandingViewController.h"
 
 SPEC_BEGIN(LandingViewControllerSpec)

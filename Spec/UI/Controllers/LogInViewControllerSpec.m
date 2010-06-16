@@ -1,4 +1,4 @@
-#import "SpecHelper.h"
+#import <Cedar-iPhone/SpecHelper.h>
 #import "LogInViewController.h"
 
 SPEC_BEGIN(LogInViewControllerSpec)
