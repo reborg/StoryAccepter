@@ -1,4 +1,6 @@
 #import <Cedar-iPhone/SpecHelper.h>
+#define HC_SHORTHAND
+#import <OCHamcrest-iPhone/OCHamcrest.h>
 #import "LogInViewController.h"
 
 SPEC_BEGIN(LogInViewControllerSpec)
@@ -21,14 +23,8 @@ describe(@"LogInViewController", ^{
         });
 
         it(@"should initialize the text field views from the XIB", ^{
-            // TODO !!! matchers
-            if (!controller.usernameTextField) {
-                fail(@"Username text field not initialized.");
-            }
-
-            if (!controller.passwordTextField) {
-                fail(@"Password text field not initialized.");
-            }
+            assertThat(controller.usernameTextField, notNilValue());
+            assertThat(controller.passwordTextField, notNilValue());
         });
     });
 
@@ -39,13 +35,8 @@ describe(@"LogInViewController", ^{
         });
 
         it(@"should set the text field views to nil", ^{
-            if (controller.usernameTextField) {
-                fail(@"Username text field not released by viewDidUnload");
-            }
-
-            if (controller.passwordTextField) {
-                fail(@"Password text field not released by viewDidUnload");
-            }
+            assertThat(controller.usernameTextField, nilValue());
+            assertThat(controller.passwordTextField, nilValue());
         });
     });
 });

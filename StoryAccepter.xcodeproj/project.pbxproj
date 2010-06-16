@@ -12,6 +12,7 @@
 		AE2B9E5E11B9F3F600DC1BF2 /* LogInViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */; };
 		AE2B9E6A11B9F4A900DC1BF2 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */; };
 		AE2B9E8A11B9F60100DC1BF2 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */; };
+		AE3BA3E211C954F100F34485 /* OCMock-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3BA3E111C954F100F34485 /* OCMock-iPhone.framework */; };
 		AE5D909211C8587B0039CF08 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */; };
 		AE5D90B711C858F50039CF08 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */; };
 		AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
@@ -51,6 +52,7 @@
 		AED7069A11B89485001A404D /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED41C7A11B821B8006DBB00 /* LandingViewController.xib */; };
 		AED706EE11B8A280001A404D /* pivotalchicken.png in Resources */ = {isa = PBXBuildFile; fileRef = AED7065511B892CF001A404D /* pivotalchicken.png */; };
 		AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
+		AEF1590511C971F3005B4F92 /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1590411C971F3005B4F92 /* OCHamcrest-iPhone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +110,9 @@
 		AE17EAAF11B5E40A004C4DC0 /* FakeHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHTTPURLResponse.m; sourceTree = "<group>"; };
 		AE17ECA211B6E632004C4DC0 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 		AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewControllerSpec.m; sourceTree = "<group>"; };
+		AE3BA3E111C954F100F34485 /* OCMock-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OCMock-iPhone.framework"; path = "/Users/pivotal/workspace/OCMock/Source/build/Release-iphoneuniversal/OCMock-iPhone.framework"; sourceTree = "<absolute>"; };
 		AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "../cedar/build/Release-iphoneuniversal/Cedar-iPhone.framework"; sourceTree = "<group>"; };
-		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9C156111B5A286007BE2ED /* DomainSpec */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = DomainSpec; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9C159411B5A47F007BE2ED /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../OCMock/Source/build/Release/OCMock.framework; sourceTree = "<group>"; };
 		AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../OCHamcrest/Source/build/Release/OCHamcrest.framework; sourceTree = "<group>"; };
 		AE9C15F011B5A54F007BE2ED /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = /Users/pivotal/workspace/cedar/build/Release/Cedar.framework; sourceTree = "<absolute>"; };
@@ -147,6 +150,7 @@
 		AED41FB511B8728D006DBB00 /* LandingViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewControllerSpec.m; sourceTree = "<group>"; };
 		AED41FDE11B87583006DBB00 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLBlocks.framework; sourceTree = "<group>"; };
 		AED7065511B892CF001A404D /* pivotalchicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pivotalchicken.png; sourceTree = "<group>"; };
+		AEF1590411C971F3005B4F92 /* OCHamcrest-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OCHamcrest-iPhone.framework"; path = "/Users/pivotal/workspace/OCHamcrest/Source/build/Release-iphoneuniversal/OCHamcrest-iPhone.framework"; sourceTree = "<absolute>"; };
 		AEF6DDED11B7221B00F691B8 /* 200.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 200.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,10 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5D90B711C858F50039CF08 /* Cedar-iPhone.framework in Frameworks */,
+				AE3BA3E211C954F100F34485 /* OCMock-iPhone.framework in Frameworks */,
 				AED41DBB11B84C9B006DBB00 /* Foundation.framework in Frameworks */,
 				AED41DBD11B84C9B006DBB00 /* UIKit.framework in Frameworks */,
 				AED41FDF11B87583006DBB00 /* PLBlocks.framework in Frameworks */,
 				AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */,
+				AEF1590511C971F3005B4F92 /* OCHamcrest-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +223,8 @@
 				AE9C15F011B5A54F007BE2ED /* Cedar.framework */,
 				AED41B7811B81C2D006DBB00 /* UIKit.framework */,
 				AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */,
+				AE3BA3E111C954F100F34485 /* OCMock-iPhone.framework */,
+				AEF1590411C971F3005B4F92 /* OCHamcrest-iPhone.framework */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -807,6 +815,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../OCMock/Source/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../OCHamcrest/Source/build/Release-iphoneuniversal\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -821,6 +831,9 @@
 					"\"$(SRCROOT)/../cedar/build/Release-iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-all_load",
+					"-ObjC",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -844,6 +857,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../cedar/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../OCMock/Source/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../OCHamcrest/Source/build/Release-iphoneuniversal\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -857,6 +872,9 @@
 					"\"$(SRCROOT)/../cedar/build/Release-iphonesimulator\"",
 				);
 				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-all_load",
+					"-ObjC",
 					"-framework",
 					Foundation,
 					"-framework",

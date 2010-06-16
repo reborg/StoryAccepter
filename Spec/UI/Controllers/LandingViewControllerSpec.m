@@ -1,4 +1,7 @@
 #import <Cedar-iPhone/SpecHelper.h>
+#import <OCMock-iPhone/OCMock.h>
+#define HC_SHORTHAND
+#import <OCHamcrest-iPhone/OCHamcrest.h>
 #import "LandingViewController.h"
 
 SPEC_BEGIN(LandingViewControllerSpec)
@@ -23,10 +26,7 @@ describe(@"LandingViewController", ^{
         });
 
         it(@"should initialize the logo image view from the XIB", ^{
-            // TODO !!! matchers
-            if (!controller.logoImageView) {
-                fail(@"Logo image not initialized.");
-            }
+            assertThat(controller.logoImageView, notNilValue());
         });
     });
 
@@ -37,10 +37,7 @@ describe(@"LandingViewController", ^{
         });
 
         it(@"should set the logo image view to nil", ^{
-            // TODO !!! matchers
-            if (controller.logoImageView) {
-                fail(@"Logo image not released by viewDidUnload");
-            }
+            assertThat(controller.logoImageView, nilValue());
         });
     });
 

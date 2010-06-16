@@ -44,7 +44,6 @@
 #pragma mark LandingAgentDelegate
 
 - (NSURLCredential *)newLogInCredential:(NSURLCredential *)failedCredential {
-
     return nil;
 }
 
