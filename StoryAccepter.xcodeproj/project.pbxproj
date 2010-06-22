@@ -12,8 +12,8 @@
 		AE2B9E5E11B9F3F600DC1BF2 /* LogInViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2B9E5D11B9F3F600DC1BF2 /* LogInViewControllerSpec.m */; };
 		AE2B9E6A11B9F4A900DC1BF2 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBCE80511B9EDBA00CAD25E /* LogInViewController.m */; };
 		AE2B9E8A11B9F60100DC1BF2 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBCE80711B9EDD700CAD25E /* LogInViewController.xib */; };
+		AE2ECC8911D11CD800580726 /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
 		AE3BA3E211C954F100F34485 /* OCMock-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3BA3E111C954F100F34485 /* OCMock-iPhone.framework */; };
-		AE5D909211C8587B0039CF08 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */; };
 		AE5D90B711C858F50039CF08 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D909111C8587B0039CF08 /* Cedar-iPhone.framework */; };
 		AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159411B5A47F007BE2ED /* OCMock.framework */; };
 		AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C159811B5A48E007BE2ED /* OCHamcrest.framework */; };
@@ -51,7 +51,6 @@
 		AED7065611B892CF001A404D /* pivotalchicken.png in Resources */ = {isa = PBXBuildFile; fileRef = AED7065511B892CF001A404D /* pivotalchicken.png */; };
 		AED7069A11B89485001A404D /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED41C7A11B821B8006DBB00 /* LandingViewController.xib */; };
 		AED706EE11B8A280001A404D /* pivotalchicken.png in Resources */ = {isa = PBXBuildFile; fileRef = AED7065511B892CF001A404D /* pivotalchicken.png */; };
-		AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9C162211B5A747007BE2ED /* libDomain.a */; };
 		AEF1590511C971F3005B4F92 /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1590411C971F3005B4F92 /* OCHamcrest-iPhone.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,7 +162,6 @@
 				AE9C159511B5A47F007BE2ED /* OCMock.framework in Frameworks */,
 				AE9C159911B5A48E007BE2ED /* OCHamcrest.framework in Frameworks */,
 				AE9C163B11B5A7BF007BE2ED /* libDomain.a in Frameworks */,
-				AE5D909211C8587B0039CF08 /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +190,8 @@
 				AED41DBB11B84C9B006DBB00 /* Foundation.framework in Frameworks */,
 				AED41DBD11B84C9B006DBB00 /* UIKit.framework in Frameworks */,
 				AED41FDF11B87583006DBB00 /* PLBlocks.framework in Frameworks */,
-				AED8C43D11B87BD1005374AC /* libDomain.a in Frameworks */,
 				AEF1590511C971F3005B4F92 /* OCHamcrest-iPhone.framework in Frameworks */,
+				AE2ECC8911D11CD800580726 /* libDomain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
